@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            border: 1px solid #000;
+            position: relative;
+        }
+        /* .item1 {
+            height: 50px;
+            background-color: aqua;
+            float: left;
+        }
+        .item2 {
+            height: 100px;
+            background-color: blueviolet;
+            position: absolute;
+            float: left;
+        }
+        .item3 {
+            background-color: burlywood;
+            height: 200px;
+            float: left;
+            vertical-align: middle;
+        } */
+        /* 
+            含有行级元素特点的元素 
+        */
+        .wrapper > div {
+            display: inline-block;
+        }
+        .item1 {
+            height: 100px;
+            background-color: aqua;
+            vertical-align: middle;
+        }
+        .item2 {
+            height: 100px;
+            background-color: blueviolet;
+            vertical-align: text-top;
+        }
+        .item3 {
+            background-color: burlywood;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        top: 所在行盒的顶部对齐
+        text-top: 代表的是 文本的顶部（四线格的顶部）
+        bottom: 所在行盒的底部对齐
+        middle：代表的是 中线（文本区域的基线向上偏移小写字母x高度的一半）对齐
+                当前元素的中线 如果是inline-block元素 则中线在当前元素的中间位置  
+                                    inline元素的话  则中线为当前元素的文本区域基线向上偏移小写字母x高度的一半
+        sub： 当前元素的基线向下偏移一点
+     -->
+    <div class="wrapper">
+        xxxxxxxxxx
+        <div class="item1">item1</div>
+        <div class="item2">item2</div>
+        <div class="item3">item3</div>
+    </div>
+</body>
+</html>
